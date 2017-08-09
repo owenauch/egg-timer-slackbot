@@ -17,7 +17,7 @@ const lib = require('lib')({token: process.env.STDLIB_TOKEN});
 * @returns {object}
 */
 module.exports = (user, channel, text = '', command = {}, botToken = null, callback) => {
-
+  console.log('here')
   callback(null, {
     response_type: 'in_channel',
     text: `Hello, <@${user}>...\nYou said: ${text}`

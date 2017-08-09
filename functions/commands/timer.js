@@ -14,13 +14,13 @@ const lib = require('lib')({token: process.env.STDLIB_TOKEN});
 */
 module.exports = (user, channel, text = '', command = {}, botToken = null, callback) => {
   const delay = parseInt(text)*1000
-
+  
   setTimeout(function() { setCallback(callback, text) }, delay)
 };
 
 function setCallback(callback, seconds) {
   callback(null, {
     response_type: 'in_channel',
-    text: `STOP: ${seconds} seconds is up!`
+    text: `${seconds} seconds is up!`
   });
 }

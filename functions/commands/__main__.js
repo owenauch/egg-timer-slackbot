@@ -34,7 +34,7 @@ module.exports = (context, callback) => {
     if (err) {
       callback(err);
     }
-
+    
     lib[`${context.service.identifier}.commands.${name}`](
       {
         user: command.user_id,
